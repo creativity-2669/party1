@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise ❤️</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- =========================
+     LOADING SCREEN
+========================= -->
+<div id="loader">
+
+    <div class="loader-content">
+
+        <div class="gift-loader">
+            🎁
+        </div>
+
+        <h2>Preparing Your Surprise...</h2>
+
+        <div class="loading-bar">
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     FLOATING BACKGROUND
+========================= -->
+
+<div class="bg-animation">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- Hearts -->
+<div id="hearts-container"></div>
+
+<!-- Balloons -->
+<div id="balloons-container"></div>
+
+<!-- Stars -->
+<div id="stars-container"></div>
+
+<!-- Particles -->
+<div id="particles-container"></div>
+
+<!-- =========================
+     LOGIN PAGE
+========================= -->
+
+<section id="loginPage" class="page active">
+
+    <div class="glass-card login-card">
+
+        <div class="login-icon">
+            🎂
+        </div>
+
+        <h1>Birthday Surprise</h1>
+
+        <p>
+            Enter your beautiful name to unlock
+            a magical birthday surprise ❤️
+        </p>
+
+        <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter Your Name..."
+        >
+
+        <button id="loginBtn">
+            Open Surprise ✨
+        </button>
+
+        <p id="errorText"></p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     SURPRISE PAGE
+========================= -->
+
+<section id="surprisePage" class="page">
+
+    <!-- Confetti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="surprise-wrapper">
+
+        <h1 id="typingTitle"></h1>
+
+        <div class="birthday-subtitle">
+            Today is all about YOU ❤️
+        </div>
+
+        <!-- Cake -->
+
+        <div class="cake-container">
+
+            <div class="cake">
+
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="layer layer-top"></div>
+                <div class="layer layer-middle"></div>
+                <div class="layer layer-bottom"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Messages -->
+
+        <div class="message-box">
+
+            <div class="message active">
+                🌹 Wishing you endless happiness,
+                success and beautiful memories.
+            </div>
+
+            <div class="message">
+                ✨ May every dream you have
+                come true this year.
+            </div>
+
+            <div class="message">
+                ❤️ Your smile makes the world brighter.
+            </div>
+
+            <div class="message">
+                🎉 Enjoy your special day to the fullest.
+            </div>
+
+        </div>
+
+        <button id="galleryBtn" class="next-btn">
+            Next Surprise →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     GALLERY PAGE
+========================= -->
+
+<section id="galleryPage" class="page">
+
+    <div class="glass-card gallery-card">
+
+        <h1>Beautiful Memories 📸</h1>
+
+        <p>
+            Every picture tells a story...
+        </p>
+
+        <div class="slider">
+
+            <div class="slides">
+
+                <!-- Replace images -->
+
+                <img src="images/photo1.jpg" class="slide active">
+
+                <img src="images/photo2.jpg" class="slide">
+
+                <img src="images/photo3.jpg" class="slide">
+
+                <img src="images/photo4.jpg" class="slide">
+
+            </div>
+
+        </div>
+
+        <div class="slider-buttons">
+
+            <button id="prevSlide">
+                ◀
+            </button>
+
+            <button id="nextSlide">
+                ▶
+            </button>
+
+        </div>
+
+        <button id="finalBtn" class="next-btn">
+            Final Surprise ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FINAL PAGE
+========================= -->
+
+<section id="finalPage" class="page">
+
+    <!-- Fireworks -->
+
+    <canvas id="fireworksCanvas"></canvas>
+
+    <div class="glass-card final-card">
+
+        <h1>
+            Happy Birthday ❤️
+        </h1>
+
+        <div class="final-message">
+
+            Dear <span id="userName">Beautiful Soul</span>,
+
+            <br><br>
+
+            On your special day,
+            I wish you endless joy,
+            success, love, laughter,
+            and unforgettable moments.
+
+            <br><br>
+
+            You deserve all the happiness
+            in the world.
+
+            <br><br>
+
+            May your life always shine
+            brighter than the stars ✨
+
+            <br><br>
+
+            🎂 Happy Birthday Once Again My Love 🎂
+
+        </div>
+
+        <button id="restartBtn">
+            Replay Surprise 🎉
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     AUDIO (OPTIONAL)
+     Add your mp3 file
+========================= -->
+
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
